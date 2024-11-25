@@ -5,3 +5,8 @@ Opprett følgende lister: navn = [’Eli’, ’Ola’, ’Ali’, ’Ela’] og
 Skriv et program som tar et navn fra kommandolinjen (konsollen) som input og skriver ut
 personens telefonnummer. Hint: navn.index().
 """
+
+navn = ["Eli", "Ola", "Ali", "Ela"]
+tlf = [9423234, 9223001, 4756001, 9592676]
+
+print(navn.index(0, tlf))
