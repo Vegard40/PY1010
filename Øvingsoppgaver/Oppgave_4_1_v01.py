@@ -23,29 +23,29 @@ https://www.timeanddate.no/vaer/norge/skien/klima
 
 '''
 
-#Import av pakker
+#Import of packages
 import numpy as np
 import matplotlib.pyplot as plt
 
-#Definisjon av variabler med tallverdier
-mnd = np.array([1, 2, 3, 4, 5, 6,
-                7, 8, 9, 10, 11, 12])  # [mnd nr]
+#Define variables with numbers
+month = np.array([1, 2, 3, 4, 5, 6,
+                7, 8, 9, 10, 11, 12])  # [month]
 temp = np.array([-3, -2, 2, 7, 11, 15,
-                 17, 16, 12, 6, 2, -3])  # [grad C]
+                 17, 16, 12, 6, 2, -3])  # [deg. C]
 
-# Beregning av middelverdi:
+# Calculation of mean value:
 mean_temp = np.mean(temp)
-print(f'Middelverdi = {mean_temp:.1f}')
+print(f'Mean Value = {mean_temp:.1f}')
 
-#Plotting av temperaturene
+#Plotting temperatures
 plt.close('all')
 plt.figure(1)
-plt.plot(mnd, temp, 'bo-', label='temperatur')
-plt.plot(mnd, temp*0 + mean_temp, 'g', label='middelverdi')
+plt.plot(month, temp, 'bo-', label='temperature')
+plt.plot(month, temp*0 + mean_temp, 'g', label='Mean Value')
 plt.legend()
-plt.title('Midlere maanedstemperatur i Skien 2005-2015')
-plt.xlabel('Maaned nr.')
-plt.ylabel('Grader C')
+plt.title('Month mean temperature at Skien, year 2005-2015')
+plt.xlabel('Month no.')
+plt.ylabel('Degree C')
 plt.xlim(0, 13)
 plt.ylim(-5, 20)
 plt.grid()
