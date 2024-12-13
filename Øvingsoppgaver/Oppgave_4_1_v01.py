@@ -26,27 +26,38 @@ https://www.timeanddate.no/vaer/norge/skien/klima
 #Import of packages
 import numpy as np
 import matplotlib.pyplot as plt
+import time
+
+#Legger inn programmet er laget av
+print("dette programmet er laget av NN (n.n@usn.no)")
+time.sleep(5)
 
 #Define variables with numbers
 month = np.array([1, 2, 3, 4, 5, 6,
                 7, 8, 9, 10, 11, 12])  # [month]
 temp = np.array([-3, -2, 2, 7, 11, 15,
                  17, 16, 12, 6, 2, -3])  # [deg. C]
+#Gjør om innholdet i arrayet til grader F
+tempF = temp * (9/5) + 32
 
 # Calculation of mean value:
 mean_temp = np.mean(temp)
+mean_tempF = np.mean(tempF)
+
 print(f'Mean Value = {mean_temp:.1f}')
+print(f'Mean ValueF = {mean_tempF:.1f}')
 
 #Plotting temperatures
 plt.close('all')
 plt.figure(1)
-plt.plot(month, temp, 'bo-', label='temperature')
-plt.plot(month, temp*0 + mean_temp, 'g', label='Mean Value')
+plt.plot(month, tempF, linestyle="-", color="green", label='temperature F')
+plt.scatter(month, tempF, marker="*", color='green')
+plt.plot(month, temp*0 + mean_tempF, 'r', label='Mean ValueF')
 plt.legend()
 plt.title('Month mean temperature at Skien, year 2005-2015')
 plt.xlabel('Month no.')
-plt.ylabel('Degree C')
-plt.xlim(0, 13)
-plt.ylim(-5, 20)
+plt.ylabel('Degree F')
+plt.xlim(0, 12)
+#plt.ylim(20, 80)
 plt.grid()
 plt.show()
