@@ -16,10 +16,12 @@ skal merkes med sirkler.
 import numpy as np
 from matplotlib import pyplot as plt
 
+#Definerer variabler
 x = np.array([1, 2, 3, 4, 5])
 y = x
 z = np.sqrt(x)
 
+#Setter opp plot
 plt.close('all')
 plt.figure(1)
 plt.plot(y, x, linestyle="-", color="red", label='y vs x')
@@ -35,6 +37,6 @@ plt.ylabel('[m]')
 plt.xlim(0, 12)
 plt.ylim(0, 9)
 plt.savefig("kurve.pdf", format="pdf")
-
+#Viser plot
 plt.show()
 plt.close()

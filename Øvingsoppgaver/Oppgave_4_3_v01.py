@@ -25,6 +25,7 @@ plt.ylabel('[m]')
 
 plt.xlim(0, 12)
 plt.ylim(0, 9)
+#Genererer en .pdf fil av plottet
 plt.savefig("kurve.pdf", format="pdf")
 
 plt.show()
