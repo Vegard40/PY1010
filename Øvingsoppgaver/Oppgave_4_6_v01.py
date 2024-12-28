@@ -6,3 +6,14 @@ ogs ̊a ønskelig  ̊a visualisere prosentandelen hvert kakestykke utgjør. Hint
 ’%1.1f%%.
 157
 """
+import numpy as np
+import matplotlib.pyplot as plt
+
+firma = ["A", "B", "C"]
+enheter = [1204, 1119, 998]
+
+plt.pie(enheter, labels=firma, autopct='%1.1f%%')
+plt.title("Firmaresultater")
+plt.show()
+
+
