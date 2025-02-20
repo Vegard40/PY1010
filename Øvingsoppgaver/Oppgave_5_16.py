@@ -7,4 +7,9 @@ p ̊a diagonalen for rektangelet. Deretter skal du lage et program ved navn hove
 som importerer rektangel modul.py, definerer variablene (lengde) L = 3,0 og (bredde) B =
 4,0, kaller de 3 funksjonene og skriver resultatet til skjerm.
 """
+a = 2
+b = 4
+
+if a < b True
+    print("test")
 
