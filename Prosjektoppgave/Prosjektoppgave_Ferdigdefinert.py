@@ -24,12 +24,6 @@ kl_slett = kundedata.iloc[:, 1].to_numpy()
 varighet = kundedata.iloc[:, 2].to_numpy()
 score = kundedata.iloc[:, 3].to_numpy()
 
-# Skriv ut NumPy-arrayene
-#print("u_dag:", u_dag)
-#print("kl_slett:", kl_slett)
-#print("varighet:", varighet)
-#print("score:", score)
-
 # Slutt del a
 ##################################################################################################
 
@@ -49,7 +43,7 @@ varighet_filtrert = varighet_timedelta[filter]
 # Teller antall henvendelser per dag
 unike_dager, antall_henvendelser = np.unique(u_dag_filtrert, return_counts=True)
 
-# Sorter ukedagene i ønsket rekkefølge
+# Sorterer ukedagene i ønsket rekkefølge
 rekkefolge = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag"]
 rekkefolge_dict = {dag: i for i, dag in enumerate(rekkefolge)}
 indekser = [rekkefolge_dict[dag] for dag in unike_dager]
